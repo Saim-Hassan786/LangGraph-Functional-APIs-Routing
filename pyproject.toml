@@ -1,0 +1,24 @@
+[project]
+name = "routing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Saim-Hassan786", email = "saimaiengineer@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "litellm",
+    "langgraph"
+]
+
+[project.scripts]
+routing = "routing:main"
+run-router = "routing.router:main"
+
+[tool.hatch.scripts]
+router = "python -m routing.router"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
